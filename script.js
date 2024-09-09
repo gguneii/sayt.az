@@ -5,8 +5,8 @@ function toggleDropdown(menuId) {
             item.classList.add('hidden');
         }
     });
-    const menu = document.getElementById(menuId);
-    menu.classList.toggle('hidden');
+    let menu1 = document.getElementById(menuId);
+    menu1.classList.toggle('hidden');
 }
 
 const menu = document.getElementById('menu')
@@ -14,9 +14,7 @@ const body = document.querySelector('body')
 
 function navbar() {
     menu.style.transform = 'translateX(0)';
-    if (menu.style.transform = "translateX(0)") {
-        body.style.overflow = 'hidden'
-    }
+   
 }
 
 function deleteNav() {
