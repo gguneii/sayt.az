@@ -973,7 +973,7 @@
                                     class="bg-mainLightPurple text-white xmd:w-8 xmd:h-8 xmd:text-base w-6 h-6 text-sm rounded-md flex items-center justify-center">1</span>
                                 <input
                                     class="w-10/12 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#a271f2]"
-                                    type="range" min="1" max="20" step="1" value="4" id="numberOfPage"
+                                    type="range" min="100" max="2000" step="100" value="4" id="numberOfPage"
                                     oninput="calculate()">
                                 <span
                                     class="bg-mainLightPurple text-white xmd:w-8 xmd:h-8 xmd:text-base w-6 h-6 text-sm rounded-md flex items-center justify-center">20</span>
@@ -999,239 +999,15 @@
                         </div>
                         <div class="bg-[#4a84bf26] flex justify-between items-center mt-4 py-4 px-4">
                             <p class="text-[#285a70]">Xərc :</p>
-                            <p class="text-mainLightPurple text-[22px] font-semibold" id="cost"></p>
+                            <p class="text-mainLightPurple text-[22px] font-semibold" id="cost"> ₼ 100</p>
                         </div>
                     </div>
                 </div>
-
+                <!-- Veb sayt elaveleri -->
                 <div class="mb-10">
                     <h3 class="text-[#212529] text-lg font-medium mt-3">Veb sayt əlavələri</h3>
                     <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-4 py-2 px-4">
-                            <label for="Toggle1"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Bloq</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle1" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle2"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Üzv girişi / Profillər</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle2" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle3"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Responsive</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle3" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle4"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Forum</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle4" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle5"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Mesajlaşma</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle5" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle6"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Canlı söhbət</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle6" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle7"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Qalereya</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle7" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle8"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Əlaqə forması</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle8" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle9"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Saytda axtarış</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle9" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle10"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Xəritə məlumatı / Geolocation</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle10" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle11"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Rezervasyon</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle11" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle12"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Sosial Media inteqrasiyası</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle12" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle13"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Analitika İzləmə</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle13" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="Toggle14"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Admin Panel</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="Toggle14" type="checkbox" class="hidden peer" oninput="calcVeb()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                         peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                          after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                        after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
+                        <div id="vebSayt" class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-4 py-2 px-4">  
                         </div>
                         <div class="bg-[#4a84bf26] flex justify-between items-center mt-4 py-4 px-4">
                             <p class="text-[#285a70]">Xərc :</p>
@@ -1240,110 +1016,11 @@
                     </div>
                 </div>
 
+                <!-- Axtarış motorunun optimallaşdırılmasıkkkkkkkk -->
                 <div class="mb-10">
                     <h3 class="text-[#212529] text-lg font-medium mt-3">Axtarış motorunun optimallaşdırılması</h3>
                     <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
-                        <div class="grid xmd:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4 py-4 px-4">
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center mr-2 rounded-full cursor-pointer"
-                                    for="Basliqlar">
-                                    <input id="Basliqlar" class="border relative border-gray-400 rounded-md cursor-pointer checked:border-[#a271f2] appearance-none h-5 w-5 transition-all duration-500 checked:bg-[#a271f2]
-                                       before:content[''] peer before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8
-                                       before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity 
-                                       checked:before:bg-[#a271f2] hover:before:opacity-40" type="checkbox"
-                                        name="Basliqlar" oninput="searchMotor()">
-                                    <div
-                                        class="absolute text-white transition-opacity opacity-0 top-2/4 left-2/4 peer-checked:opacity-100 pointer-events-none -translate-y-2/4 -translate-x-2/4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                            fill="currentColor" stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </label>
-                                <label for="Basliqlar" class="select-none cursor-pointer">Başlıqlar & Meta</label>
-                            </div>
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center mr-2 rounded-full cursor-pointer"
-                                    for="AcarSoz">
-                                    <input id="AcarSoz" class="border relative border-gray-400 rounded-md cursor-pointer checked:border-[#a271f2] appearance-none h-5 w-5 transition-all duration-500 checked:bg-[#a271f2]
-                                       before:content[''] peer before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8
-                                       before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity 
-                                       checked:before:bg-[#a271f2] hover:before:opacity-40" type="checkbox"
-                                        name="AcarSoz" oninput="searchMotor()">
-                                    <div
-                                        class="absolute text-white transition-opacity opacity-0 top-2/4 left-2/4 peer-checked:opacity-100 pointer-events-none -translate-y-2/4 -translate-x-2/4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                            fill="currentColor" stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </label>
-                                <label for="AcarSoz" class="select-none cursor-pointer">Açar söz</label>
-                            </div>
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center mr-2 rounded-full cursor-pointer"
-                                    for="Texnika">
-                                    <input id="Texnika" class="border relative border-gray-400 rounded-md cursor-pointer checked:border-[#a271f2] appearance-none h-5 w-5 transition-all duration-500 checked:bg-[#a271f2]
-                                       before:content[''] peer before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8
-                                       before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity 
-                                       checked:before:bg-[#a271f2] hover:before:opacity-40" type="checkbox"
-                                        name="Texnika" oninput="searchMotor()">
-                                    <div
-                                        class="absolute text-white transition-opacity opacity-0 top-2/4 left-2/4 peer-checked:opacity-100 pointer-events-none -translate-y-2/4 -translate-x-2/4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                            fill="currentColor" stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </label>
-                                <label for="Texnika" class="select-none cursor-pointer">+20 Qabaqcıl Texnika</label>
-                            </div>
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center mr-2 rounded-full cursor-pointer"
-                                    for="BasliqTeq">
-                                    <input id="BasliqTeq" class="border relative border-gray-400 rounded-md cursor-pointer checked:border-[#a271f2] appearance-none h-5 w-5 transition-all duration-500 checked:bg-[#a271f2]
-                                       before:content[''] peer before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8
-                                       before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity 
-                                       checked:before:bg-[#a271f2] hover:before:opacity-40" type="checkbox"
-                                        name="BasliqTeq" oninput="searchMotor()">
-                                    <div
-                                        class="absolute text-white transition-opacity opacity-0 top-2/4 left-2/4 peer-checked:opacity-100 pointer-events-none -translate-y-2/4 -translate-x-2/4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                            fill="currentColor" stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </label>
-                                <label for="BasliqTeq" class="select-none cursor-pointer">Başlıq Teqləri</label>
-                            </div>
-                            <div class="inline-flex items-center">
-                                <label class="relative flex items-center mr-2 rounded-full cursor-pointer"
-                                    for="Sitemap">
-                                    <input id="Sitemap" class="border relative border-gray-400 rounded-md cursor-pointer checked:border-[#a271f2] appearance-none h-5 w-5 transition-all duration-500 checked:bg-[#a271f2]
-                                       before:content[''] peer before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8
-                                       before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity 
-                                       checked:before:bg-[#a271f2] hover:before:opacity-40" type="checkbox"
-                                        name="Sitemap" oninput="searchMotor()">
-                                    <div
-                                        class="absolute text-white transition-opacity opacity-0 top-2/4 left-2/4 peer-checked:opacity-100 pointer-events-none -translate-y-2/4 -translate-x-2/4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                            fill="currentColor" stroke="currentColor" stroke-width="1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </label>
-                                <label for="Sitemap" class="select-none cursor-pointer">Sitemap</label>
-                            </div>
+                        <div id="searchOpt" class="grid xmd:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4 py-4 px-4">
                         </div>
                         <div class="bg-[#4a84bf26] flex justify-between items-center mt-4 py-4 px-4">
                             <p class="text-[#285a70]">Xerc :</p>
@@ -1352,109 +1029,11 @@
                     </div>
                 </div>
 
+                <!-- Elektron ticarət əlavələri -->
                 <div class="mb-10">
                     <div>
                         <h3 class="text-[#212529] text-lg font-medium mt-3">Elektron ticarət əlavələri</h3>
-                        <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-6 gap-y-6 mt-4 py-2 px-4">
-                            <label for="odenis"
-                                class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Ödəniş</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="odenis" type="checkbox" class="hidden peer" oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="sebet"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Səbət</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="sebet" type="checkbox" class="hidden peer" oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="mehsullar"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Məhsullar</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="mehsullar" type="checkbox" class="hidden peer"
-                                        oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="beyendiklerim"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Bəyəndiklərim</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="beyendiklerim" type="checkbox" class="hidden peer"
-                                        oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="filtr"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Filtr</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="filtr" type="checkbox" class="hidden peer" oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
-                            <label for="mehsulHagda"
-                                class="inline-flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
-                                <div class="w-3/4">
-                                    <span class="text-sm font-medium text-gray-900">Məhsul Haqqında</span>
-                                </div>
-
-                                <div class="relative">
-                                    <input id="mehsulHagda" type="checkbox" class="hidden peer"
-                                        oninput="elektronValues()">
-                                    <div
-                                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                                     peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 
-                                      after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 
-                                    after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#a271f2]">
-                                    </div>
-                                </div>
-                            </label>
+                        <div id="ecommerce" class="grid lg:grid-cols-2 grid-cols-1 gap-x-6 gap-y-6 mt-4 py-2 px-4">              
                         </div>
                         <div class="bg-[#4a84bf26] flex justify-between items-center mt-4 py-4 px-4">
                             <p class="text-[#285a70]">Xərc :</p>
@@ -1462,6 +1041,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Logo dizayni -->
                 <div class="mb-10">
                     <h3 class="text-[#212529] text-lg font-medium mt-3">Logo dizayni</h3>
                     <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
@@ -1472,10 +1052,10 @@
                                 <span>Sade</span>
                                 <span>Xususi</span>
                             </div>
-                            <div>
+                            <div id="logoInp">
                                 <input
                                     class="md:ml-4 ml-0 md:w-11/12 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#a271f2]"
-                                    type="range" min="1" max="3" step="1" value="1" id="logoInp" oninput="logoValues()">
+                                    type="range" min="0" max="200" step="100" value="1" id="logoInp" oninput="logoValues()">
                             </div>
                         </div>
                         <div class="bg-[#4a84bf26] flex justify-between items-center mt-4 py-4 px-4">
@@ -1681,7 +1261,8 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="app.js" ></script>
 </body>
 
 </html>
